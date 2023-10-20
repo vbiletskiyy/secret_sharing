@@ -1,24 +1,40 @@
-# README
+# Secret Sharing Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
+Follow these easy steps to install and start the app:
 
-Things you may want to cover:
+### Prerequisites
+The setups steps expect following tools installed on the system.
 
-* Ruby version
+* Github
+* Docker
 
-* System dependencies
+### Check out the repository
+```git clone https://github.com/vbiletskiyy/secret_sharing.git```
 
-* Configuration
+### Open cd
+```cd secret_sharing```
 
-* Database creation
+### Set up and start Rails app with Docker
+```docker-compose build```
 
-* Database initialization
+## To get an interactive shell with docker-compose run:
+```docker-compose exec web bash```
 
-* How to run the test suite
+Now you can work inside the container as if you were just using Rails and Ruby on your local machine
 
-* Services (job queues, cache servers, search engines, etc.)
+Install the gems required by the application:
 
-* Deployment instructions
+```bundle install```
 
-* ...
+## Start the Rails server
+Switch to another terminal. You can start the rails server using the command given below.
+
+```docker-compose up```
+
+And now you can visit the site with the URL http://localhost:3000
+
+Use Ctrl-C to stop
+
+## Test
+Run ```rspec``` in the terminal
