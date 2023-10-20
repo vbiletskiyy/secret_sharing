@@ -30,7 +30,7 @@ class Api::V1::SecretsController < ApplicationController
 
   def destroy
     @secret.destroy
-    render json: { success: true, message: 'Secret has been deleted' }
+    render json: { success: true, message: 'Secret has been deleted' }, status: :no_content
   end
 
   private
