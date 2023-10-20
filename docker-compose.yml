@@ -7,10 +7,3 @@ services:
     volumes:
       - .:/usr/src/secret_sharing
     command: rails s -b 0.0.0.0
-  db:
-    image: nouchka/sqlite3:latest
-    volumes:
-      - ./db/:/root/db/
-
-volumes:
-  db:
