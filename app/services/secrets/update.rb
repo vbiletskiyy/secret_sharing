@@ -3,7 +3,7 @@ module Secrets
     def call(secret, params)
       @secret = secret
       @params = params
-      validation = Secrets::CreateContract.new.call(@params.to_h)
+      validation = Secrets::UpdateContract.new.call(@params.to_h)
       return validation if validation.errors.present?
 
       update
